@@ -1,0 +1,8 @@
+{
+  "recommendations": [
+    "tamasfe.even-better-toml",
+    "esbenp.prettier-vscode",
+    "svelte.svelte-vscode",
+    "bradlc.vscode-tailwindcss"
+  ]
+}

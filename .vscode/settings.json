@@ -1,0 +1,7 @@
+{
+  "files.associations": {
+    "*tsconfig.json": "jsonc",
+    "*.css": "tailwindcss"
+  },
+  "css.lint.unknownAtRules": "ignore"
+}

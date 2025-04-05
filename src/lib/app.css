@@ -1,0 +1,7 @@
+@import "tailwindcss";
+@plugin "./tw-iconify.js";
+@plugin "daisyui" {
+  logs: false;
+}
+
+@custom-variant dark (&:where(.dark, .dark *));

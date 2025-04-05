@@ -1,0 +1,36 @@
+{
+  "name": "create-svelte-pages",
+  "version": "1.0.0",
+  "main": "index.ts",
+  "type": "module",
+  "scripts": {
+    "dev": "vite dev",
+    "build": "vite build",
+    "preview": "wrangler pages dev",
+    "db:migrate:local": "drizzle-kit generate && wrangler d1 migrations apply imagen --local",
+    "db:migrate:remote": "drizzle-kit generate && wrangler d1 migrations apply imagen --remote",
+    "typegen": "wrangler types ./src/bindings.d.ts --env-interface Bindings --x-include-runtime && svelte-kit sync",
+    "clean": "rm -rf node_modules .svelte-kit && bun install && bun typegen"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@iconify-json/ri": "^1.2.5",
+    "@iconify/tailwind": "^1.2.0",
+    "@sveltejs/adapter-cloudflare": "^5.1.0",
+    "@sveltejs/kit": "^2.19.0",
+    "@sveltejs/vite-plugin-svelte": "^5.0.3",
+    "@tailwindcss/vite": "^4.0.13",
+    "daisyui": "^5.0.4",
+    "drizzle-kit": "^0.30.5",
+    "drizzle-orm": "^0.41.0",
+    "hono": "^4.7.5",
+    "svelte": "^5.23.0",
+    "tailwindcss": "^4.0.13",
+    "typescript": "^5.8.2",
+    "vite": "^6.2.1",
+    "wrangler": "3.84.1"
+  },
+  "patchedDependencies": {
+    "wrangler@3.84.1": "patches/wrangler@3.84.1.patch"
+  }
+}
